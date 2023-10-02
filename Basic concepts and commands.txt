@@ -2,13 +2,29 @@ Concepts from https://www.youtube.com/watch?v=VIBWdLLq9kQ&t=530s video.
 Commands are given inside {}. exclude them while typing the commands.
 
 1. Download Git and install. Open command prompt and check this command 
+
 {git}
 
 2. set username and email id in cmd. after setting them close cmd.
 give your Github username
+
 {git config --global user.name "PoojithaGitCommits"}
 {git config --global user.email "put_your_github_email_here"}
 
-3. to get the file/folder from Github to local (VS Code)
+3. to get the file/folder from Github to local (VS Code)- Git Clone from GitHub
+first create a dummy folder in local and open the folder in VS code.
+next open VS code terminal to bring Github repository- 'GIT_BASICS' under the dummy folder.
+command in VS code terminal (How to get the link of git repo? right click code button and copy the http link from github repo)
+if git not recognized in vs code terminal, add bin and cmd path in environmental system variables -PATH
+D:\Program Files\Git\cmd     AND    D:\Program Files\Git\bin
 
+{git clone https://github.com/PoojithaGitCommits/GIT_BASICS.git}
 
+4. Now you will be inside dummy folder 'git concepts'   D:\web dev concepts\git concepts>
+go inside the GIT_BASICS folder. type below command in vs code terminal
+
+{cd GIT_BASICS}
+
+5. now go to D:\web dev concepts\git concepts\GIT_BASICS in local and check for .git hidden file
+
+6. Now let us make some changes in VS code by modifying or adding a new file in the repo
