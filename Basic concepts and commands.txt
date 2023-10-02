@@ -20,7 +20,10 @@ D:\Program Files\Git\cmd     AND    D:\Program Files\Git\bin
 
 {git clone https://github.com/PoojithaGitCommits/GIT_BASICS.git}
 
-4. 
+4. Now you will be inside dummy folder 'git concepts'   D:\web dev concepts\git concepts>
+go inside the GIT_BASICS folder
+
+{cd GIT_BASICS}
 
 
 
