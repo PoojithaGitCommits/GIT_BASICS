@@ -44,3 +44,13 @@ use {git add "Basic concepts and commands.txt"} if you have spaces in file name 
 
 11. check again {git status} Changes will be tracked shown in green colour GREEN COLOUR
 
+12. commiting the changes to git folder. later to be pushed to github.
+
+{git commit -m "modified txt file"}  write commit message -m " "
+
+13. {git push origin main} pushing to Github repository
+origin here is the code link copied from github repo. so it will push to the github repo which we cloned initially.
+main here is the main branch of github repo
+
+
+
