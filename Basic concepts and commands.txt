@@ -17,18 +17,6 @@ next open VS code terminal to bring Github repository- 'GIT_BASICS' under the du
 command in VS code terminal (How to get the link of git repo? right click code button and copy the http link from github repo)
 if git not recognized in vs code terminal, add bin and cmd path in environmental system variables -PATH
 D:\Program Files\Git\cmd     AND    D:\Program Files\Git\bin
-<<<<<<< HEAD
-=======
-
-{git clone https://github.com/PoojithaGitCommits/GIT_BASICS.git}
-
-4. Now you will be inside dummy folder 'git concepts'   D:\web dev concepts\git concepts>
-go inside the GIT_BASICS folder
-
-{cd GIT_BASICS}
-
-
->>>>>>> 5c5a83710de87cbfe456bfa0f0077592aeadbde9
 
 {git clone https://github.com/PoojithaGitCommits/GIT_BASICS.git}
 
@@ -41,3 +29,18 @@ go inside the GIT_BASICS folder. type below command in vs code terminal
 
 6. Now let us make some changes in VS code by modifying or adding a new file in the repo
 7. the changes will be untracked
+
+8. {git status}
+
+9. modified:   Basic concepts and commands.txt   changes will be in RED colour untracked
+
+10.  The shorthand command for {git add --all} is 
+
+{git add -A}  for adding all changes to stage area
+
+for adding the changes/modifications/deletions of one file only to staging area
+use {git add "Basic concepts and commands.txt"} if you have spaces in file name use " "
+{git add file1.txt}
+
+11. check again {git status} Changes will be tracked shown in green colour GREEN COLOUR
+
