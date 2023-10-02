@@ -28,3 +28,4 @@ go inside the GIT_BASICS folder. type below command in vs code terminal
 5. now go to D:\web dev concepts\git concepts\GIT_BASICS in local and check for .git hidden file
 
 6. Now let us make some changes in VS code by modifying or adding a new file in the repo
+7. the changes will be untracked
