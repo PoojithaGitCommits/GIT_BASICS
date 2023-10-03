@@ -125,7 +125,8 @@ now a new branch will be created which has all the files index.html ,style.css t
 2. now in vs terminal, if I type this command {git branch -a}
 THIS WILL LIST ONLY "main". THIS WILL NOT SHOW the new branch "newbranch1" created. why? the local will not have the branch you created in Github until you pull
 
-3. {git pull}
+3. {git pull} ---git pulls from current branch
+if u need to pull from a certain branch {git pull origin main}
 
 output:
 * main green
@@ -213,6 +214,21 @@ now your manager or lead will check the pull request, your comment and then he c
 6. now program.java file is added to main branch
 
 if we dont have access to main branch, we create pull requests
+
+-------------------------------------------------------------------------------------------------------------------------------------
+conflicts
+
+1. conflicts arise if multiple branches ask for pull request to merge with main
+2. main has code "city: none"
+3. branch1 has code "city: delhi"
+4. branch2 has code "city: chennai"
+
+when branch1 gives a pull request, owner can see the changes and he can allow merging with main
+but when branch2 gives a pull request, there is a CONFLICT
+
+git gets confused and it doesn't know what to do
+so owner sees the conflict and manually change the branch2 code "city:delhi" and then merges with main
+
 
 
 
