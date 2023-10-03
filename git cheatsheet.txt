@@ -1,0 +1,23 @@
+{git}
+{git config --global user.name "PoojithaGitCommits"}
+{git config --global user.email "put_your_github_email_here"}
+{git clone https://github.com/PoojithaGitCommits/GIT_BASICS.git}
+{cd GIT_BASICS}
+{git status}
+{git add --all}  {git add -A} 
+{git add "Basic concepts and commands.txt"} if you have spaces in file name use " "
+{git add file1.txt} if you do not have any spaces.
+{git commit -m "modified txt file"}  write commit message -m " "
+{git push origin main}
+{git pull}
+{git pull} ---git pulls from current branch
+if u need to pull from a certain branch {git pull origin main}
+{cd ..} command is used to change directory. to move backward -to move to the parent folder
+{git init} then add ,commit, connect to github repo
+{git remote add origin https://github.com/PoojithaGitCommits/GIT_COMMANDS.git}
+{git branch}   
+{git branch -m main}  changing name from master to main
+{git branch -a} 
+{git checkout main} 
+{git diff newbranch1}
+{git merge newbranch1}
