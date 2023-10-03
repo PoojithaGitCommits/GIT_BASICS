@@ -6,7 +6,7 @@ Commands are given inside {}. exclude them while typing the commands.
 {git}
 
 2. set username and email id in cmd. after setting them close cmd.
-give your Github username
+give your Github username and email
 
 {git config --global user.name "PoojithaGitCommits"}
 {git config --global user.email "put_your_github_email_here"}
@@ -55,6 +55,60 @@ main here is the main branch of github repo
 14. now make changes in github (you can add a file/ modify file / delete a file). now instead of cloning we can pull the changes as we already have recent copy of repo folder in vs code or local system.
 
 {git pull}
+
+15. {cd ..} command is used to change directory. to move backward (to move to the parent folder)
+
+16. when we cloned from github ,we had .git folder hidden in local
+17. now we will create a folder inside "git concepts" . NOTE: "git concepts" folder has "GIT_BASICS" folder which we cloned
+18. to host the new folder "GIT_COMMANDS" in github , you need to change the new folder to git folder by following command
+first traverse to this new folder in terminal and
+
+{git init}
+
+19. now a new folder "GIT_COMMANDS" is created with .git hidden folder inside. now the new files created in this folder like style.css , index.html etc are the untracked files. to add all the untracked files to staging area
+
+{git add .}
+
+20. next {git commit -m "created index and style files in new folder"} 
+
+21. NOW WE CANNOT PUSH AS WE DID BEFORE. WHY? this time we don't have the origin (the repo link) to push the folder
+22. so create a repository and give the same name that you gave when u created the new folder in local.
+23. now you will get the origin link
+24. in terminal,
+
+{git remote add origin https://github.com/PoojithaGitCommits/GIT_COMMANDS.git}
+
+Now we are connected to the origin of the github repo
+
+25. if u remember we need origin and branch to push. now we have got origin. but we need to know about the branch name/ details of the new repo "GIT_COMMANDS" to push. you cannot use "main" branch as we used earlier. last time we already know the branch name
+
+{git branch}   
+gives the name     * master
+master is the branch of new repo. 
+
+{git branch}  Lists all the local branches in your Git repository. The currently checked-out branch will be highlighted with an asterisk (*).
+
+26. now we can push {git push origin master}
+OR
+Rename the branch and then push. Renaming a branch involves creating a new branch with the desired name and deleting the old branch. It's not a direct operation within the git branch command.
+
+To rename a branch in Git, you can follow these steps:
+
+Checkout the Branch: First, make sure you are on the branch that you want to rename. {git checkout <old_branch_name>}
+Rename the Branch: Use the -m option with the git branch command to rename the branch. Replace <new_branch_name> with the desired new name for the branch. {git branch -m <new_branch_name>}
+
+{git branch -m main}  changing name from master to main
+{git branch} now check for the branch
+{git push origin main} now 2 files index.html and style.css will be pushed to github repo
+
+
+
+
+
+
+
+
+
 
 
 
