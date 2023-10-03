@@ -180,6 +180,43 @@ after merging go to github and see if js file is added to main branch, it will n
 ---------------------------------------------------------------------------------------------------------------------------------------------
 PULL REQUESTS
 
+{git branch -a}
+shows all branches and current branch
+{git branch newbranch2}   ---creates a new branch -newbranch2
+{git branch -a}
+{git checkout newbranch2}
+{git branch}--- states all the branch and gives u latest checkout branch
+
+Now create some file under this new branch in vs code "program.java"
+{git add .}
+{git commit -m "added java file in newbranch2"}
+
+EARLIER WE CREATED SUB BRANCH IN GITHUB, NEXT WE PULLED THE BRANCH , MERGED AND PUSHED
+NOW WE CREATED a BRANCH "newbranch2" IN VS TERMINAL , ADDED .java file and WE WILL PUSH IT
+
+{git push origin newbranch2}
+
+now java file we created should be in main branch also.
+switch to main branch {git checkout main}
+
+During projects, when you are working in a team, usually we won't have access to main repository, we won't be able to merge
+
+1. So you click on the pull requests in Github
+2. click on "new pull requests"
+3. you will notice on top "base branch: main"  "compare branch: main"
+we need to merge "newbranch2" with "main"
+so change "compare branch: newbranch2" using drop down
+4. click on "create pull request" , you  can leave a comment too " I added java file in my new branch which needs to be in main branch"
+
+now your manager or lead will check the pull request, your comment and then he can "merge pull request"
+5. click on "confirm merge"
+6. now program.java file is added to main branch
+
+if we dont have access to main branch, we create pull requests
+
+
+
+
 
 
 
