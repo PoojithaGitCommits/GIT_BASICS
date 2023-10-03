@@ -58,6 +58,8 @@ main here is the main branch of github repo
 14. now make changes in github (you can add a file/ modify file / delete a file). now instead of cloning we can pull the changes alone as we already have recent copy of repo folder in vs code or local system.
 
 {git pull}
+{git pull} ---git pulls from current branch
+if u need to pull from a certain branch {git pull origin main}
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -126,7 +128,6 @@ now a new branch will be created which has all the files index.html ,style.css t
 THIS WILL LIST ONLY "main". THIS WILL NOT SHOW the new branch "newbranch1" created. why? the local will not have the branch you created in Github until you pull
 
 3. {git pull} ---git pulls from current branch
-if u need to pull from a certain branch {git pull origin main}
 
 output:
 * main green
