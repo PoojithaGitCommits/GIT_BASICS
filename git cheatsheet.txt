@@ -11,7 +11,8 @@
 {git push origin main}
 {git pull}
 {git pull} ---git pulls from current branch
-if u need to pull from a certain branch {git pull origin main}
+if u need to pull from a certain branch 
+{git pull origin main}
 {cd ..} command is used to change directory. to move backward -to move to the parent folder
 {git init} then add ,commit, connect to github repo
 {git remote add origin https://github.com/PoojithaGitCommits/GIT_COMMANDS.git}
