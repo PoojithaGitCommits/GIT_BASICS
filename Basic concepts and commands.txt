@@ -11,10 +11,13 @@ give your Github username and email
 {git config --global user.name "PoojithaGitCommits"}
 {git config --global user.email "put_your_github_email_here"}
 
+GITHUB TO LOCAL. make changes and push back to GITHUB
+
 3. to get the file/folder from Github to local (VS Code)- Git Clone from GitHub
 first create a dummy folder in local and open the folder in VS code.
 next open VS code terminal to bring Github repository- 'GIT_BASICS' under the dummy folder.
 command in VS code terminal (How to get the link of git repo? right click code button and copy the http link from github repo)
+
 if git not recognized in vs code terminal, add bin and cmd path in environmental system variables -PATH
 D:\Program Files\Git\cmd     AND    D:\Program Files\Git\bin
 
@@ -40,7 +43,7 @@ go inside the GIT_BASICS folder. type below command in vs code terminal
 
 for adding the changes/modifications/deletions of one file only to staging area
 use {git add "Basic concepts and commands.txt"} if you have spaces in file name use " "
-{git add file1.txt}
+{git add file1.txt} if you do not have any spaces.
 
 11. check again {git status} Changes will be tracked shown in green colour GREEN COLOUR
 
@@ -52,20 +55,24 @@ use {git add "Basic concepts and commands.txt"} if you have spaces in file name 
 origin here is the code link copied from github repo. so it will push to the github repo which we cloned initially.
 main here is the main branch of github repo
 
-14. now make changes in github (you can add a file/ modify file / delete a file). now instead of cloning we can pull the changes as we already have recent copy of repo folder in vs code or local system.
+14. now make changes in github (you can add a file/ modify file / delete a file). now instead of cloning we can pull the changes alone as we already have recent copy of repo folder in vs code or local system.
 
 {git pull}
 
-15. {cd ..} command is used to change directory. to move backward (to move to the parent folder)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+PUSHING A REPO TO GITHUB
+
+15. {cd ..} command is used to change directory. to move backward (to move to the parent folder "git concepts")
 
 16. when we cloned from github ,we had .git folder hidden in local
-17. now we will create a folder inside "git concepts" . NOTE: "git concepts" folder has "GIT_BASICS" folder which we cloned
+17. now we will create a folder "GIT_COMMANDS" inside "git concepts" locally . NOTE: "git concepts" folder has "GIT_BASICS" folder which we cloned
 18. to host the new folder "GIT_COMMANDS" in github , you need to change the new folder to git folder by following command
 first traverse to this new folder in terminal and
 
 {git init}
 
-19. now a new folder "GIT_COMMANDS" is created with .git hidden folder inside. now the new files created in this folder like style.css , index.html etc are the untracked files. to add all the untracked files to staging area
+19. now a new folder "GIT_COMMANDS" is created with .git hidden folder inside LOCALLY. now the new files created in this folder like style.css , index.html etc are the untracked files. to add all the untracked files to staging area
 
 {git add .}
 
@@ -74,7 +81,7 @@ first traverse to this new folder in terminal and
 21. NOW WE CANNOT PUSH AS WE DID BEFORE. WHY? this time we don't have the origin (the repo link) to push the folder
 22. so create a repository and give the same name that you gave when u created the new folder in local.
 23. now you will get the origin link
-24. in terminal,
+24. in terminal, TYPE BELOW COMMAND to get connected to the Github repo
 
 {git remote add origin https://github.com/PoojithaGitCommits/GIT_COMMANDS.git}
 
@@ -94,12 +101,93 @@ Rename the branch and then push. Renaming a branch involves creating a new branc
 
 To rename a branch in Git, you can follow these steps:
 
-Checkout the Branch: First, make sure you are on the branch that you want to rename. {git checkout <old_branch_name>}
+Checkout the Branch: First, make sure you are on the branch that you want to rename. {git checkout <old_branch_name>} (not in the video)
 Rename the Branch: Use the -m option with the git branch command to rename the branch. Replace <new_branch_name> with the desired new name for the branch. {git branch -m <new_branch_name>}
 
 {git branch -m main}  changing name from master to main
-{git branch} now check for the branch
+
+{git branch} now check for all the branches in the repo
+
 {git push origin main} now 2 files index.html and style.css will be pushed to github repo
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+BRANCHING
+traverse to the new folder now in terminal
+
+{git branch -a} Lists both local and remote branches, providing a comprehensive view of all available branches.
+output: * main
+
+1. now go to github repo and create a new sub branch from main "newbranch1" (click this -  create newbranch1 from 'main')
+now a new branch will be created which has all the files index.html ,style.css that we had in main branch
+
+2. now in vs terminal, if I type this command {git branch -a}
+THIS WILL LIST ONLY "main". THIS WILL NOT SHOW the new branch "newbranch1" created. why? the local will not have the branch you created in Github until you pull
+
+3. {git pull}
+
+output:
+* main green
+remotes/origin/newbranch1  red
+remotes/origin/main  red
+
+4. if you notice in the output it says you have 2 branches , but you are currently in 'main' branch
+5. to switch the current branch, use this command
+{git checkout newbranch1} 
+
+output: switched to newbranch1
+
+6. now again check by {git branch -a}
+output:
+a
+* newbranch1  ----asterix in newbranch1. asterix tells the current branch
+main green
+remotes/origin/newbranch1  red
+remotes/origin/main  red
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+make changes in project and push it to your newbranch1 now.. how? follow below steps
+
+7. now create new file "utilfunctions.js" under "GIT_COMMANDS" folder locally in VS code and write some code, do the usual procedure
+8. {git status} ---> {git add utilfunctions.js} OR {{git add .}}  ---> {git commit -m "added js file in newbranch1 branch"} 
+{git push origin newbranch1}
+
+now js is pushed to newbranch1. check github
+
+9. in vs terminal, let us go to main branch {git checkout main}
+if you observe, the js file created will not be there in vs code folder tree. but if you again checkout to newbranch1 {git checkout newbranch1}, you will find the js file
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+MERGING WITH MAIN BRANCH AND PUSHING IT TO MAIN BRANCH
+
+10. CONCEPT: the main branch always has the main code. when you are working in a team. team members will create a branch from main and then do the changes in the new branch and push to main branch
+
+11. now current branch is main. to check the difference , to check what is different in newbranch,type the below command
+{git diff newbranch1}
+
+it will give you the difference. it will say new js file is there in newbranch1 branch
+current folder is still main. let us merge the newbranch1 with main
+
+{git merge newbranch1}
+
+after merging go to github and see if js file is added to main branch, it will not show you because you did not push it yet to main, you have only merged it locally
+
+{git push origin main}   NOW YOU WILL SEE JS FILE IN MAIN BRANCH
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+PULL REQUESTS
+
+
+
+
+
+
+
+
+
 
 
 
