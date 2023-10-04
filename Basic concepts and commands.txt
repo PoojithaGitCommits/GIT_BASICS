@@ -230,7 +230,8 @@ but when branch2 gives a pull request, there is a CONFLICT
 git gets confused and it doesn't know what to do
 so owner sees the conflict and manually change the branch2 code "city:delhi" and then merges with main
 
-
+------------------------------------------------------------------------------------------------------------------------------------------
+github issues and securing folder
 
 
 
